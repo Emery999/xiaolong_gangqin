@@ -52,9 +52,9 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(26, 26, 26, 0.95)';
+        navbar.style.background = 'rgba(220, 200, 168, 0.95)';
     } else {
-        navbar.style.background = 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)';
+        navbar.style.background = 'linear-gradient(135deg, #dcc8a8 0%, #eedcc2 100%)';
     }
 });
 
