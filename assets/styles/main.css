@@ -64,8 +64,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f8f8f8"/><path d="M0 300L50 320L100 280L150 340L200 300L250 360L300 320L350 380L400 340L450 400L500 360L550 420L600 380L650 440L700 400L750 460L800 420L850 480L900 440L950 500L1000 460L1050 520L1100 480L1150 540L1200 500V600H0V300Z" fill="%23DAA520" opacity="0.1"/></svg>') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), 
+                url('../images/golden piano.jpg') center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
