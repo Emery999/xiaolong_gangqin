@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "title": "Premier Piano & Music Tutoring | Expert Instruction for All Ages",
+    "description": "Professional piano, composition, and music theory lessons. Expert tutor with proven track record teaching all ages from beginner to advanced levels.",
+    "siteName": "SpacePet Musical Mastery",
+    "tagline": "Inspiring musical excellence for all ages",
+    "year": "2024"
+  },
+  "navigation": {
+    "logo": "🎹 SpacePet Musical Mastery",
+    "menuItems": [
+      { "label": "Home", "href": "#home" },
+      { "label": "About", "href": "#about" },
+      { "label": "Services", "href": "#services" },
+      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "location": "section#home",
+    "mainHeading": "FIND YOUR SOUND",
+    "subtitle": "Expert piano instruction, composition guidance, and music theory mastery",
+    "description": "Professional music educator with exceptional results teaching students of all ages. From your first keys to advanced performance, we'll unlock your musical potential.",
+    "primaryButton": {
+      "text": "Start Your Journey",
+      "href": "#contact"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "href": "#about"
+    },
+    "backgroundImage": "assets/images/golden piano 2.jpg"
+  },
+  "about": {
+    "location": "section#about",
+    "sectionTitle": "About Your Instructor",
+    "mainHeading": "Passionate. Professional. Proven Results.",
+    "description": "With years of experience in music education, I specialize in creating personalized learning experiences that inspire and challenge students at every level. My approach combines traditional techniques with modern teaching methods to ensure rapid progress and lasting musical understanding.",
+    "qualifications": [
+      "✓ Expert in piano performance and pedagogy",
+      "✓ Composition and songwriting instruction", 
+      "✓ Comprehensive music theory education",
+      "✓ Proven success with students ages 4-84",
+      "✓ Flexible scheduling and lesson formats"
+    ]
+  },
+  "services": {
+    "location": "section#services",
+    "sectionTitle": "Our Services",
+    "cards": [
+      {
+        "icon": "🎹",
+        "title": "Piano Instruction",
+        "description": "From beginner fundamentals to advanced performance techniques. Classical, jazz, pop, and contemporary styles.",
+        "features": [
+          "Proper technique and posture",
+          "Sight-reading skills",
+          "Performance preparation", 
+          "Grade examinations"
+        ]
+      },
+      {
+        "icon": "🎼",
+        "title": "Composition & Songwriting",
+        "description": "Learn to create your own music. From simple melodies to complex arrangements and original compositions.",
+        "features": [
+          "Melody and harmony writing",
+          "Song structure and form",
+          "Digital music production basics",
+          "Creative expression techniques"
+        ]
+      },
+      {
+        "icon": "📚", 
+        "title": "Music Theory",
+        "description": "Build a solid theoretical foundation that enhances your playing and musical understanding.",
+        "features": [
+          "Scales, chords, and progressions",
+          "Analysis and ear training",
+          "Harmony and counterpoint",
+          "Exam preparation support"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "location": "section#testimonials", 
+    "sectionTitle": "What Students Say",
+    "reviews": [
+      {
+        "text": "My 7-year-old went from complete beginner to playing beautiful pieces in just 6 months. The patience and expertise shown is remarkable.",
+        "author": "Sarah M., Parent"
+      },
+      {
+        "text": "As an adult learner, I was nervous about starting piano. The supportive approach and tailored lessons gave me confidence to pursue my musical dreams.",
+        "author": "David K., Adult Student"
+      },
+      {
+        "text": "The composition lessons opened up a whole new world for me. I'm now writing my own songs and performing them!",
+        "author": "Emma T., Teen Student"
+      }
+    ]
+  },
+  "contact": {
+    "location": "section#contact",
+    "sectionTitle": "Start Your Musical Journey Today",
+    "info": {
+      "heading": "Get In Touch",
+      "description": "Ready to begin? Let's discuss your musical goals and create a personalized learning plan.",
+      "details": {
+        "email": {
+          "label": "Email:",
+          "value": "info@elitepianostudio.com",
+          "icon": "📧"
+        },
+        "phone": {
+          "label": "Phone:", 
+          "value": "(123) 456-7890",
+          "icon": "📞"
+        },
+        "location": {
+          "label": "Location:",
+          "value": "In-person and online lessons available", 
+          "icon": "🏠"
+        },
+        "hours": {
+          "label": "Hours:",
+          "value": "Flexible scheduling, 7 days a week",
+          "icon": "⏰"
+        }
+      },
+      "lessonOptions": {
+        "heading": "Lesson Options:",
+        "options": [
+          "Individual lessons (30, 45, 60 minutes)",
+          "Group lessons available", 
+          "Online video lessons",
+          "Recital and performance opportunities"
+        ]
+      }
+    },
+    "form": {
+      "heading": "Request Information",
+      "fields": {
+        "name": {
+          "placeholder": "Your Name",
+          "required": true,
+          "type": "text"
+        },
+        "email": {
+          "placeholder": "Your Email", 
+          "required": true,
+          "type": "email"
+        },
+        "phone": {
+          "placeholder": "Phone Number",
+          "required": false,
+          "type": "tel"
+        },
+        "ageGroup": {
+          "label": "Select Age Group",
+          "required": true,
+          "type": "select",
+          "options": [
+            { "value": "", "text": "Select Age Group" },
+            { "value": "child", "text": "Child (4-12)" },
+            { "value": "teen", "text": "Teen (13-17)" },
+            { "value": "adult", "text": "Adult (18+)" }
+          ]
+        },
+        "experience": {
+          "label": "Experience Level",
+          "required": true,
+          "type": "select", 
+          "options": [
+            { "value": "", "text": "Experience Level" },
+            { "value": "beginner", "text": "Complete Beginner" },
+            { "value": "some", "text": "Some Experience" },
+            { "value": "intermediate", "text": "Intermediate" },
+            { "value": "advanced", "text": "Advanced" }
+          ]
+        },
+        "message": {
+          "placeholder": "Tell us about your musical goals and any questions you have...",
+          "required": false,
+          "type": "textarea",
+          "rows": 4
+        }
+      },
+      "submitButton": {
+        "text": "Send Message",
+        "loadingText": "Sending...",
+        "successMessage": "Thank you, {name}! Your message has been received. We'll get back to you soon to discuss your musical journey."
+      }
+    }
+  },
+  "footer": {
+    "location": "footer",
+    "copyright": "© {year} {siteName}. {tagline}.",
+    "subtitle": "Professional piano, composition, and music theory instruction."
+  }
+}

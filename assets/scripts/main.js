@@ -190,10 +190,124 @@ function addMobileMenuStyles() {
     document.head.appendChild(style);
 }
 
+// Content management system
+let siteContent = {};
+
+// Load and populate content from JSON
+async function loadSiteContent() {
+    try {
+        const response = await fetch('assets/content/site-content.json');
+        siteContent = await response.json();
+        populateContent();
+    } catch (error) {
+        console.warn('Could not load site content:', error);
+    }
+}
+
+// Populate content based on data-content attributes
+function populateContent() {
+    document.querySelectorAll('[data-content]').forEach(element => {
+        const contentPath = element.getAttribute('data-content');
+        const content = getNestedProperty(siteContent, contentPath);
+        
+        if (content !== undefined) {
+            populateElement(element, content, contentPath);
+        }
+    });
+}
+
+// Get nested property from object using dot notation
+function getNestedProperty(obj, path) {
+    return path.split('.').reduce((current, key) => current && current[key], obj);
+}
+
+// Populate individual element based on content type
+function populateElement(element, content, contentPath) {
+    switch(element.tagName.toLowerCase()) {
+        case 'title':
+            element.textContent = content;
+            break;
+        case 'meta':
+            if (element.getAttribute('name') === 'description') {
+                element.setAttribute('content', content);
+            }
+            break;
+        case 'ul':
+            if (contentPath.includes('navigation.menuItems')) {
+                populateNavigation(element, content);
+            } else if (contentPath.includes('qualifications')) {
+                populateList(element, content);
+            }
+            break;
+        case 'div':
+            if (contentPath.includes('services.cards')) {
+                populateServices(element, content);
+            } else if (contentPath.includes('testimonials.reviews')) {
+                populateTestimonials(element, content);
+            }
+            break;
+        case 'a':
+            if (contentPath.includes('Button')) {
+                element.textContent = content.text;
+                element.href = content.href;
+            }
+            break;
+        case 'p':
+            if (contentPath === 'footer.copyright') {
+                element.textContent = content
+                    .replace('{year}', siteContent.metadata.year)
+                    .replace('{siteName}', siteContent.metadata.siteName)
+                    .replace('{tagline}', siteContent.metadata.tagline);
+            } else {
+                element.textContent = content;
+            }
+            break;
+        default:
+            element.textContent = content;
+    }
+}
+
+// Populate navigation menu
+function populateNavigation(element, menuItems) {
+    element.innerHTML = menuItems.map(item => 
+        `<li><a href="${item.href}">${item.label}</a></li>`
+    ).join('');
+}
+
+// Populate simple list
+function populateList(element, items) {
+    element.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+}
+
+// Populate services cards
+function populateServices(element, services) {
+    element.innerHTML = services.map(service => `
+        <div class="service-card">
+            <div class="service-icon">${service.icon}</div>
+            <h3>${service.title}</h3>
+            <p>${service.description}</p>
+            <ul>
+                ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+        </div>
+    `).join('');
+}
+
+// Populate testimonials
+function populateTestimonials(element, testimonials) {
+    element.innerHTML = testimonials.map(testimonial => `
+        <div class="testimonial-card">
+            <p>"${testimonial.text}"</p>
+            <cite>- ${testimonial.author}</cite>
+        </div>
+    `).join('');
+}
+
 // Initialize mobile menu
 document.addEventListener('DOMContentLoaded', function() {
     addMobileMenuStyles();
     createMobileMenu();
+    loadSiteContent();
 });
 
 // Add scroll-to-top functionality
