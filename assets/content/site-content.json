@@ -18,9 +18,9 @@
   },
   "hero": {
     "location": "section#home",
-    "mainHeading": "FIND YOUR SOUND",
-    "subtitle": "Expert piano instruction, composition guidance, and music theory mastery",
-    "description": "Professional music educator with exceptional results teaching students of all ages. From your first keys to advanced performance, we'll unlock your musical potential.",
+    "mainHeading": "COLLIN MEREDITH",
+    "subtitle": "Expert piano, keyboard and guitar (acoustic and electric) instruction, composition guidance, and music theory mastery",
+    "description": "Collin is a professional music educator with exceptional results teaching students of all ages. From your first keys to advanced performance, Collin will unlock your musical potential.",
     "primaryButton": {
       "text": "Start Your Journey",
       "href": "#contact"
@@ -79,6 +79,17 @@
           "Analysis and ear training",
           "Harmony and counterpoint",
           "Exam preparation support"
+        ]
+      },
+      {
+        "icon": "🎸",
+        "title": "Guitar Instruction",
+        "description": "Master both acoustic and electric guitar with comprehensive instruction from beginner to advanced levels.",
+        "features": [
+          "Proper fretting and picking technique",
+          "Chord progressions and strumming patterns",
+          "Lead guitar and soloing techniques",
+          "Multiple genres and styles"
         ]
       }
     ]
