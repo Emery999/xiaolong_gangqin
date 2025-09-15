@@ -93,7 +93,7 @@ body {
 }
 
 .hero-content h2 {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
     margin-bottom: 1rem;
     font-weight: bold;
     /* Fallback color for all browsers - bright gold */
@@ -116,7 +116,7 @@ body {
     letter-spacing: 3px;
     white-space: nowrap;
     position: absolute;
-    top: 2vh;
+    top: 3vh;
     right: 1.2vw;
     
     /* Enhanced gold gradient for Webkit browsers */
@@ -137,11 +137,11 @@ body {
 }
 
 .hero-description {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
     max-width: 500px;
     position: absolute;
-    bottom: 6vh;
+    bottom: 4vh;
     right: 34vw;
     text-align: center;
     color: #4A2C17;
@@ -214,35 +214,6 @@ body {
     object-fit: cover;
 }
 
-.play-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-}
-
-.video-thumbnail:hover .play-overlay {
-    background: rgba(0,0,0,0.1);
-}
-
-.play-button {
-    width: 30px;
-    height: 30px;
-    background: rgba(255,255,255,0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #333;
-    text-indent: 2px;
-}
 
 .video-title {
     position: absolute;
