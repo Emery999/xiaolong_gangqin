@@ -164,7 +164,7 @@ body {
 /* Video Thumbnails */
 .video-thumbnails {
     position: absolute !important;
-    bottom: 18vh !important;
+    bottom: 22vh !important;
     right: 6vw !important;
     display: flex !important;
     flex-direction: column !important;
