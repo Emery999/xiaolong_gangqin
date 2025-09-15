@@ -128,4 +128,4 @@ This website template is provided as-is for your music tutoring business. Feel f
 
 ---
 
-**Ready to inspire the next generation of musicians?** 🎹✨
+**Ready to inspire the next generation of musicians?** 🎹✨# Enable GitHub Pages from main branch
