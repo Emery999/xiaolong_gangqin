@@ -164,7 +164,7 @@ body {
 /* Video Thumbnails */
 .video-thumbnails {
     position: absolute !important;
-    bottom: 12vh !important;
+    bottom: 10vh !important;
     right: 6vw !important;
     display: flex !important;
     flex-direction: column !important;
@@ -259,7 +259,7 @@ body {
 
 /* Buttons */
 .btn-primary, .btn-secondary {
-    padding: 15px 30px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
