@@ -196,8 +196,8 @@ let siteContent = {};
 // Load and populate content from JSON
 async function loadSiteContent() {
     try {
-        const cacheBust = Date.now();
-        const response = await fetch(`assets/content/site-content.json?v=${cacheBust}`);
+        const cacheBust = Date.now() + Math.random();
+        const response = await fetch(`assets/content/site-content.json?v=${cacheBust}&t=${new Date().getTime()}`);
         siteContent = await response.json();
         populateContent();
     } catch (error) {
