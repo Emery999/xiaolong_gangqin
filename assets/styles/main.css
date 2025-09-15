@@ -141,7 +141,7 @@ body {
     margin-bottom: 2rem;
     max-width: 500px;
     position: absolute;
-    bottom: 4.5vh;
+    bottom: 6vh;
     right: 34vw;
     text-align: center;
     color: #4A2C17;
@@ -154,7 +154,7 @@ body {
 
 .cta-buttons {
     position: absolute;
-    bottom: 4vh;
+    bottom: 2vh;
     right: 6vw;
     display: flex;
     gap: 1.5rem;
@@ -164,7 +164,7 @@ body {
 /* Video Thumbnails */
 .video-thumbnails {
     position: absolute !important;
-    bottom: 15vh !important;
+    bottom: 12vh !important;
     right: 6vw !important;
     display: flex !important;
     flex-direction: column !important;
