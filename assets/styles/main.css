@@ -259,7 +259,7 @@ body {
 
 /* Buttons */
 .btn-primary, .btn-secondary {
-    padding: 10px 30px;
+    padding: 8px 20px;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -268,8 +268,9 @@ body {
     display: inline-block;
     transition: all 0.3s ease;
     cursor: pointer;
-    width: 215px;
+    width: 250px;
     text-align: center;
+    white-space: nowrap;
 }
 
 .btn-primary {
