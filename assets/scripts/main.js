@@ -191,17 +191,149 @@ function addMobileMenuStyles() {
 }
 
 // Content management system
-let siteContent = {};
+let siteContent = {
+  "metadata": {
+    "title": "Premier Piano & Music Tutoring | Expert Instruction for All Ages",
+    "description": "Professional piano, composition, and music theory lessons. Expert tutor with proven track record teaching all ages from beginner to advanced levels.",
+    "siteName": "SpacePet Musical Mastery",
+    "tagline": "Inspiring musical excellence for all ages",
+    "year": "2024"
+  },
+  "navigation": {
+    "logo": "🎹 SpacePet Musical Mastery",
+    "menuItems": [
+      { "label": "Home", "href": "#home" },
+      { "label": "About", "href": "#about" },
+      { "label": "Services", "href": "#services" },
+      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "location": "section#home",
+    "mainHeading": "COLLIN MEREDITH",
+    "subtitle": "Expert piano, keyboard and guitar (acoustic and electric) instruction, composition guidance, and music theory mastery",
+    "description": "Collin is a professional music educator with exceptional results teaching students of all ages. From your first keys to advanced performance, Collin will unlock your musical potential.",
+    "primaryButton": {
+      "text": "Start Your Journey",
+      "href": "#contact"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "href": "#about"
+    },
+    "backgroundImage": "assets/images/golden piano 2.jpg"
+  },
+  "about": {
+    "location": "section#about",
+    "sectionTitle": "About Your Instructor",
+    "mainHeading": "Passionate. Professional. Proven Results.",
+    "description": "With years of experience in music education, I specialize in creating personalized learning experiences that inspire and challenge students at every level. My approach combines traditional techniques with modern teaching methods to ensure rapid progress and lasting musical understanding.",
+    "qualifications": [
+      "✓ Expert in piano performance and pedagogy",
+      "✓ Composition and songwriting instruction", 
+      "✓ Comprehensive music theory education",
+      "✓ Proven success with students ages 4-84",
+      "✓ Flexible scheduling and lesson formats"
+    ]
+  },
+  "services": {
+    "location": "section#services",
+    "sectionTitle": "Our Services",
+    "cards": [
+      {
+        "icon": "🎹",
+        "title": "Piano Instruction",
+        "description": "From beginner fundamentals to advanced performance techniques. Classical, jazz, pop, and contemporary styles.",
+        "features": [
+          "Proper technique and posture",
+          "Sight-reading skills",
+          "Performance preparation", 
+          "Grade examinations"
+        ]
+      },
+      {
+        "icon": "🎼",
+        "title": "Composition & Songwriting",
+        "description": "Learn to create your own music. From simple melodies to complex arrangements and original compositions.",
+        "features": [
+          "Melody and harmony writing",
+          "Song structure and form",
+          "Digital music production basics",
+          "Creative expression techniques"
+        ]
+      },
+      {
+        "icon": "📚", 
+        "title": "Music Theory",
+        "description": "Build a solid theoretical foundation that enhances your playing and musical understanding.",
+        "features": [
+          "Scales, chords, and progressions",
+          "Analysis and ear training",
+          "Harmony and counterpoint",
+          "Exam preparation support"
+        ]
+      },
+      {
+        "icon": "🎸",
+        "title": "Guitar Instruction",
+        "description": "Master both acoustic and electric guitar with comprehensive instruction from beginner to advanced levels.",
+        "features": [
+          "Proper fretting and picking technique",
+          "Chord progressions and strumming patterns",
+          "Lead guitar and soloing techniques",
+          "Multiple genres and styles"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "location": "section#testimonials", 
+    "sectionTitle": "What Students Say",
+    "reviews": [
+      {
+        "text": "My 7-year-old went from complete beginner to playing beautiful pieces in just 6 months. The patience and expertise shown is remarkable.",
+        "author": "Sarah M., Parent"
+      },
+      {
+        "text": "As an adult learner, I was nervous about starting piano. The supportive approach and tailored lessons gave me confidence to pursue my musical dreams.",
+        "author": "David K., Adult Student"
+      },
+      {
+        "text": "The composition lessons opened up a whole new world for me. I'm now writing my own songs and performing them!",
+        "author": "Emma T., Teen Student"
+      }
+    ]
+  },
+  "contact": {
+    "location": "section#contact",
+    "sectionTitle": "Start Your Musical Journey Today",
+    "info": {
+      "heading": "Get In Touch",
+      "description": "Ready to begin? Let's discuss your musical goals and create a personalized learning plan."
+    },
+    "form": {
+      "heading": "Request Information"
+    }
+  },
+  "footer": {
+    "location": "footer",
+    "copyright": "© {year} {siteName}. {tagline}.",
+    "subtitle": "Professional piano, composition, and music theory instruction."
+  }
+};
 
 // Load and populate content from JSON
 async function loadSiteContent() {
     try {
         const cacheBust = Date.now() + Math.random();
         const response = await fetch(`assets/content/site-content.json?v=${cacheBust}&t=${new Date().getTime()}`);
-        siteContent = await response.json();
+        const fetchedContent = await response.json();
+        siteContent = fetchedContent;
         populateContent();
     } catch (error) {
-        console.warn('Could not load site content:', error);
+        console.warn('Could not load site content via fetch, using embedded content:', error);
+        populateContent();
     }
 }
 
