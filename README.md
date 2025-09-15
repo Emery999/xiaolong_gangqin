@@ -1,3 +1,13 @@
+---
+title: Piano Tutoring Website
+emoji: 🎹
+colorFrom: gold
+colorTo: brown
+sdk: static
+pinned: false
+license: mit
+---
+
 # Elite Piano Studio - Professional Music Tutoring Website
 
 A professional, responsive website designed to attract new students to a piano and music tutoring service. This website showcases expertise in piano instruction, composition, and music theory for students of all ages.
@@ -7,6 +17,7 @@ A professional, responsive website designed to attract new students to a piano a
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Professional Appearance**: Clean, elegant design that builds trust and credibility
 - **Student-Focused Content**: Highlights benefits for different age groups and skill levels
+- **Video Demonstrations**: Embedded performance videos with native browser controls
 - **Contact Form**: Easy-to-use form for prospective students to get in touch
 - **Service Showcase**: Clear presentation of piano, composition, and theory instruction
 - **Social Proof**: Testimonials from satisfied students and parents
@@ -31,6 +42,12 @@ A professional, responsive website designed to attract new students to a piano a
    - Harmony and counterpoint
    - Exam preparation support
 
+4. **Guitar Instruction**
+   - Acoustic and electric guitar techniques
+   - Chord progressions and strumming patterns
+   - Lead guitar and soloing techniques
+   - Multiple genres and styles
+
 ## 🚀 Getting Started
 
 1. **Clone or download** this repository
@@ -50,7 +67,9 @@ piano-tutor-website/
 │   │   └── main.css        # All website styling
 │   ├── scripts/
 │   │   └── main.js         # Interactive functionality
-│   └── images/             # Image assets (add your photos here)
+│   ├── images/             # Image assets (add your photos here)
+│   ├── videos/             # Video demonstrations
+│   └── content/            # JSON content configuration
 ├── README.md               # This file
 └── .gitignore             # Git ignore rules
 ```
@@ -58,7 +77,7 @@ piano-tutor-website/
 ## 🎨 Customization Guide
 
 ### Content Updates
-- Edit `index.html` to update text, testimonials, and contact information
+- Edit `assets/content/site-content.json` to update text, testimonials, and contact information
 - Replace placeholder contact details with your actual information
 - Add your professional photos to `assets/images/` and update image references
 
@@ -79,6 +98,7 @@ piano-tutor-website/
 - **Accessibility**: Semantic HTML and proper navigation structure
 - **Performance**: Optimized CSS and minimal JavaScript
 - **SEO Friendly**: Proper meta tags and semantic markup
+- **Video Support**: Web-optimized MP4 videos with thumbnails
 
 ## 🎯 Target Audience
 
@@ -99,6 +119,7 @@ The contact form is currently set up with basic validation and simulation. To ma
 
 ## 🌐 Deployment Options
 
+- **HuggingFace Spaces**: Excellent for multimedia content (recommended)
 - **GitHub Pages**: Free hosting directly from your repository
 - **Netlify**: Easy deployment with form processing capabilities
 - **Vercel**: Fast deployment with excellent performance
@@ -128,4 +149,4 @@ This website template is provided as-is for your music tutoring business. Feel f
 
 ---
 
-**Ready to inspire the next generation of musicians?** 🎹✨# Enable GitHub Pages from main branch
+**Ready to inspire the next generation of musicians?** 🎹✨
