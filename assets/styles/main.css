@@ -93,7 +93,7 @@ body {
 }
 
 .hero-content h2 {
-    font-size: 5.2rem;
+    font-size: 4.2rem;
     margin-bottom: 1rem;
     font-weight: bold;
     /* Fallback color for all browsers - bright gold */
@@ -116,7 +116,7 @@ body {
     letter-spacing: 3px;
     white-space: nowrap;
     position: absolute;
-    top: 0.5vh;
+    top: 2vh;
     right: 1.2vw;
     
     /* Enhanced gold gradient for Webkit browsers */
@@ -137,12 +137,12 @@ body {
 }
 
 .hero-description {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     max-width: 500px;
     position: absolute;
-    bottom: 3.5vh;
-    right: 32vw;
+    bottom: 4.5vh;
+    right: 34vw;
     text-align: center;
     color: #4A2C17;
     font-style: italic;
@@ -164,11 +164,11 @@ body {
 /* Video Thumbnails */
 .video-thumbnails {
     position: absolute !important;
-    bottom: 16vh !important;
+    bottom: 18vh !important;
     right: 6vw !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 2rem !important;
+    gap: 1.8rem !important;
     z-index: 10;
     width: 480px !important;
 }
