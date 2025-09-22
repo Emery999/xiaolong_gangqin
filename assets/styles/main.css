@@ -732,14 +732,153 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Comprehensive Responsive Design for All Screen Sizes */
+
+/* Large desktops (1600px+) */
+@media (min-width: 1600px) {
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 4.2rem;
+    }
+    .video-thumbnails {
+        width: 520px !important;
+    }
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Standard desktops (1200px - 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .hero-content h2 {
+        font-size: 3.6rem;
+    }
+    .video-thumbnails {
+        width: 460px !important;
+    }
+    .hero-description {
+        right: 36vw;
+    }
+}
+
+/* Small laptops and large tablets (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .hero-content h2 {
+        font-size: 3.2rem;
+        right: 2vw;
+    }
+    .video-thumbnails {
+        width: 400px !important;
+        right: 4vw !important;
+        bottom: 10vh !important;
+    }
+    .hero-description {
+        right: 33vw;
+        max-width: 420px;
+        font-size: 1.3rem;
+    }
+    .nav-menu a {
+        font-size: 1.3rem;
+    }
+    .btn-primary, .btn-secondary {
+        width: 230px;
+        font-size: 1rem;
+    }
+    .scrolling-banner {
+        right: -3vw;
+        width: 1000px;
+    }
+}
+
+/* Very small laptops (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-content h2 {
+        font-size: 2.8rem;
+        right: 3vw;
+        top: calc(90px + 1vh);
+    }
+    .video-thumbnails {
+        width: 340px !important;
+        right: 3vw !important;
+        bottom: 8vh !important;
+    }
+    .hero-description {
+        right: 30vw;
+        max-width: 380px;
+        font-size: 1.2rem;
+        bottom: 6vh;
+    }
+    .hero-services-list {
+        font-size: 1rem;
+        padding: 1.3rem 1.8rem;
+    }
+    .cta-buttons {
+        right: 3vw;
+        bottom: 3vh;
+    }
+    .btn-primary, .btn-secondary {
+        width: 200px;
+        font-size: 0.95rem;
+        padding: 6px 16px;
+    }
+    .nav-menu a {
+        font-size: 1.2rem;
+    }
+    .scrolling-banner {
+        right: -2vw;
+        width: 900px;
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablets and small laptops (max-width: 767px) */
+@media (max-width: 767px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px 20px;
     }
     
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .hero-content h2 {
+        font-size: 2.5rem;
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-description {
+        position: static;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .hero-services-list {
+        font-size: 1rem;
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .video-thumbnails {
+        position: static !important;
+        width: 100% !important;
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+    
+    .video-thumbnail {
+        height: 180px;
+    }
+    
+    .cta-buttons {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 280px;
     }
     
     .nav-menu {
@@ -762,20 +901,23 @@ footer p {
         gap: 1rem;
     }
     
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
     
     section {
         padding: 60px 0;
     }
     
-    .services-grid {
-        grid-template-columns: 1fr;
+    .scrolling-banner {
+        top: calc(90px + 4vh);
+        font-size: 1.4rem;
+        right: -10vw;
+        width: 800px;
     }
 }
 
+/* Small phones (max-width: 480px) */
 @media (max-width: 480px) {
     .hero-content h2 {
         font-size: 2rem;
@@ -784,5 +926,14 @@ footer p {
     .service-card,
     .testimonial-card {
         padding: 1.5rem;
+    }
+    
+    .hero-services-list {
+        font-size: 0.95rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 250px;
+        font-size: 0.9rem;
     }
 }/* Force deployment refresh - Sun Sep 14 19:31:54 PDT 2025 */
