@@ -1,12 +1,3 @@
-/* Force consistent viewport scaling across all devices */
-@viewport {
-    width: device-width;
-    zoom: 1.0;
-    min-zoom: 1.0;
-    max-zoom: 1.0;
-    user-zoom: fixed;
-}
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -19,44 +10,27 @@
 }
 
 html {
-    /* Force consistent viewport and prevent zoom issues */
+    /* Consistent text rendering across devices */
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    /* Lock font size and scaling */
-    font-size: 16px !important;
-    zoom: 1 !important;
-    -moz-transform: scale(1) !important;
-    -webkit-transform: scale(1) !important;
-    transform: scale(1) !important;
-    /* Prevent user zoom and ensure consistent display */
-    -webkit-user-zoom: fixed;
-    -moz-user-zoom: fixed;
-    user-zoom: fixed;
-    /* Force viewport dimensions */
-    width: 100vw;
-    height: 100vh;
+    /* Base font size for consistent scaling */
+    font-size: 16px;
+    /* Allow natural browser zoom behavior */
     overflow-x: hidden;
 }
 
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.6;
-    -webkit-text-size-adjust: 100% !important;
-    -ms-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
     color: #333;
     background-color: #fefefe;
-    /* Prevent overscroll and zoom issues */
+    /* Prevent horizontal scroll */
     overflow-x: hidden;
-    width: 100vw !important;
-    min-height: 100vh !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    /* Force consistent display */
-    zoom: 1 !important;
-    -webkit-zoom: 1 !important;
-    -moz-zoom: 1 !important;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -115,7 +89,7 @@ body {
     color: #333;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     transition: color 0.3s ease;
 }
 
@@ -140,7 +114,7 @@ body {
 }
 
 .hero-content h2 {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
     margin-bottom: 1rem;
     font-weight: bold;
     font-style: italic;
