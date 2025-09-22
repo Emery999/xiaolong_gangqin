@@ -12,41 +12,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Simple form validation
-    if (!data.name || !data.email) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-    
-    // Simulate form submission
-    const button = this.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-    button.textContent = 'Sending...';
-    button.disabled = true;
-    
-    // Simulate API call delay
-    setTimeout(() => {
-        alert(`Thank you, ${data.name}! Your message has been received. We'll get back to you soon to discuss your musical journey.`);
-        this.reset();
-        button.textContent = originalText;
-        button.disabled = false;
-    }, 1500);
-});
+// Form submission handling (only if form exists)
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        
+        // Simple form validation
+        if (!data.name || !data.email) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Simulate form submission
+        const button = this.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+        button.textContent = 'Sending...';
+        button.disabled = true;
+        
+        // Simulate API call delay
+        setTimeout(() => {
+            alert(`Thank you, ${data.name}! Your message has been received. We'll get back to you soon to discuss your musical journey.`);
+            this.reset();
+            button.textContent = originalText;
+            button.disabled = false;
+        }, 1500);
+    });
+}
 
 // Navbar background change on scroll
 window.addEventListener('scroll', function() {
@@ -190,257 +193,12 @@ function addMobileMenuStyles() {
     document.head.appendChild(style);
 }
 
-// Content management system
-let siteContent = {
-  "metadata": {
-    "title": "Premier Piano & Music Tutoring | Expert Instruction for All Ages",
-    "description": "Professional piano, composition, and music theory lessons. Expert tutor with proven track record teaching all ages from beginner to advanced levels.",
-    "siteName": "SpacePet Musical Mastery",
-    "tagline": "Inspiring musical excellence for all ages",
-    "year": "2024"
-  },
-  "navigation": {
-    "logo": "🎹 SpacePet Musical Mastery",
-    "menuItems": [
-      { "label": "Home", "href": "#home" },
-      { "label": "About", "href": "#about" },
-      { "label": "Services", "href": "#services" },
-      { "label": "Testimonials", "href": "#testimonials" },
-      { "label": "Contact", "href": "#contact" }
-    ]
-  },
-  "hero": {
-    "location": "section#home",
-    "mainHeading": "COLLIN MEREDITH",
-    "subtitle": "Expert piano, keyboard and guitar (acoustic and electric) instruction, composition guidance, and music theory mastery",
-    "description": "Collin is a professional music educator with exceptional results teaching students of all ages. From your first keys to advanced performance, Collin will unlock your musical potential.",
-    "primaryButton": {
-      "text": "Start Your Journey",
-      "href": "#contact"
-    },
-    "secondaryButton": {
-      "text": "Learn More",
-      "href": "#about"
-    },
-    "backgroundImage": "assets/images/golden piano 2.jpg"
-  },
-  "about": {
-    "location": "section#about",
-    "sectionTitle": "About Your Instructor",
-    "mainHeading": "Passionate. Professional. Proven Results.",
-    "description": "With years of experience in music education, I specialize in creating personalized learning experiences that inspire and challenge students at every level. My approach combines traditional techniques with modern teaching methods to ensure rapid progress and lasting musical understanding.",
-    "qualifications": [
-      "✓ Expert in piano performance and pedagogy",
-      "✓ Composition and songwriting instruction", 
-      "✓ Comprehensive music theory education",
-      "✓ Proven success with students ages 4-84",
-      "✓ Flexible scheduling and lesson formats"
-    ]
-  },
-  "services": {
-    "location": "section#services",
-    "sectionTitle": "Our Services",
-    "cards": [
-      {
-        "icon": "🎹",
-        "title": "Piano Instruction",
-        "description": "From beginner fundamentals to advanced performance techniques. Classical, jazz, pop, and contemporary styles.",
-        "features": [
-          "Proper technique and posture",
-          "Sight-reading skills",
-          "Performance preparation", 
-          "Grade examinations"
-        ]
-      },
-      {
-        "icon": "🎼",
-        "title": "Composition & Songwriting",
-        "description": "Learn to create your own music. From simple melodies to complex arrangements and original compositions.",
-        "features": [
-          "Melody and harmony writing",
-          "Song structure and form",
-          "Digital music production basics",
-          "Creative expression techniques"
-        ]
-      },
-      {
-        "icon": "📚", 
-        "title": "Music Theory",
-        "description": "Build a solid theoretical foundation that enhances your playing and musical understanding.",
-        "features": [
-          "Scales, chords, and progressions",
-          "Analysis and ear training",
-          "Harmony and counterpoint",
-          "Exam preparation support"
-        ]
-      },
-      {
-        "icon": "🎸",
-        "title": "Guitar Instruction",
-        "description": "Master both acoustic and electric guitar with comprehensive instruction from beginner to advanced levels.",
-        "features": [
-          "Proper fretting and picking technique",
-          "Chord progressions and strumming patterns",
-          "Lead guitar and soloing techniques",
-          "Multiple genres and styles"
-        ]
-      }
-    ]
-  },
-  "testimonials": {
-    "location": "section#testimonials", 
-    "sectionTitle": "What Students Say",
-    "reviews": [
-      {
-        "text": "My 7-year-old went from complete beginner to playing beautiful pieces in just 6 months. The patience and expertise shown is remarkable.",
-        "author": "Sarah M., Parent"
-      },
-      {
-        "text": "As an adult learner, I was nervous about starting piano. The supportive approach and tailored lessons gave me confidence to pursue my musical dreams.",
-        "author": "David K., Adult Student"
-      },
-      {
-        "text": "The composition lessons opened up a whole new world for me. I'm now writing my own songs and performing them!",
-        "author": "Emma T., Teen Student"
-      }
-    ]
-  },
-  "contact": {
-    "location": "section#contact",
-    "sectionTitle": "Start Your Musical Journey Today",
-    "info": {
-      "heading": "Get In Touch",
-      "description": "Ready to begin? Let's discuss your musical goals and create a personalized learning plan."
-    },
-    "form": {
-      "heading": "Request Information"
-    }
-  },
-  "footer": {
-    "location": "footer",
-    "copyright": "© {year} {siteName}. {tagline}.",
-    "subtitle": "Professional piano, composition, and music theory instruction."
-  }
-};
+// Content management system removed - using direct HTML content
 
-// Load and populate content from JSON
-async function loadSiteContent() {
-    try {
-        const cacheBust = Date.now() + Math.random();
-        const response = await fetch(`assets/content/site-content.json?v=${cacheBust}&t=${new Date().getTime()}`);
-        const fetchedContent = await response.json();
-        siteContent = fetchedContent;
-        populateContent();
-    } catch (error) {
-        console.warn('Could not load site content via fetch, using embedded content:', error);
-        populateContent();
-    }
-}
-
-// Populate content based on data-content attributes
-function populateContent() {
-    document.querySelectorAll('[data-content]').forEach(element => {
-        const contentPath = element.getAttribute('data-content');
-        const content = getNestedProperty(siteContent, contentPath);
-        
-        if (content !== undefined) {
-            populateElement(element, content, contentPath);
-        }
-    });
-}
-
-// Get nested property from object using dot notation
-function getNestedProperty(obj, path) {
-    return path.split('.').reduce((current, key) => current && current[key], obj);
-}
-
-// Populate individual element based on content type
-function populateElement(element, content, contentPath) {
-    switch(element.tagName.toLowerCase()) {
-        case 'title':
-            element.textContent = content;
-            break;
-        case 'meta':
-            if (element.getAttribute('name') === 'description') {
-                element.setAttribute('content', content);
-            }
-            break;
-        case 'ul':
-            if (contentPath.includes('navigation.menuItems')) {
-                populateNavigation(element, content);
-            } else if (contentPath.includes('qualifications')) {
-                populateList(element, content);
-            }
-            break;
-        case 'div':
-            if (contentPath.includes('services.cards')) {
-                populateServices(element, content);
-            } else if (contentPath.includes('testimonials.reviews')) {
-                populateTestimonials(element, content);
-            }
-            break;
-        case 'a':
-            if (contentPath.includes('Button')) {
-                element.textContent = content.text;
-                element.href = content.href;
-            }
-            break;
-        case 'p':
-            if (contentPath === 'footer.copyright') {
-                element.textContent = content
-                    .replace('{year}', siteContent.metadata.year)
-                    .replace('{siteName}', siteContent.metadata.siteName)
-                    .replace('{tagline}', siteContent.metadata.tagline);
-            } else {
-                element.textContent = content;
-            }
-            break;
-        default:
-            element.textContent = content;
-    }
-}
-
-// Populate navigation menu
-function populateNavigation(element, menuItems) {
-    element.innerHTML = menuItems.map(item => 
-        `<li><a href="${item.href}">${item.label}</a></li>`
-    ).join('');
-}
-
-// Populate simple list
-function populateList(element, items) {
-    element.innerHTML = items.map(item => `<li>${item}</li>`).join('');
-}
-
-// Populate services cards
-function populateServices(element, services) {
-    element.innerHTML = services.map(service => `
-        <div class="service-card">
-            <div class="service-icon">${service.icon}</div>
-            <h3>${service.title}</h3>
-            <p>${service.description}</p>
-            <ul>
-                ${service.features.map(feature => `<li>${feature}</li>`).join('')}
-            </ul>
-        </div>
-    `).join('');
-}
-
-// Populate testimonials
-function populateTestimonials(element, testimonials) {
-    element.innerHTML = testimonials.map(testimonial => `
-        <div class="testimonial-card">
-            <p>"${testimonial.text}"</p>
-            <cite>- ${testimonial.author}</cite>
-        </div>
-    `).join('');
-}
-
-// Initialize mobile menu
+// Initialize mobile menu 
 document.addEventListener('DOMContentLoaded', function() {
     addMobileMenuStyles();
     createMobileMenu();
-    loadSiteContent();
 });
 
 // Add scroll-to-top functionality

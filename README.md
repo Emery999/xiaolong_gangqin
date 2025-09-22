@@ -113,17 +113,17 @@ This website is designed to attract:
 
 The contact form is currently set up with basic validation and simulation. To make it functional:
 
-1. **Email Service**: Integrate with services like Formspree, Netlify Forms, or EmailJS
-2. **Backend**: Connect to your own server-side form processing
+1. **Email Service**: Integrate with services like Formspree, AWS SES, or EmailJS
+2. **Backend**: Connect to your own server-side form processing (AWS Lambda/API Gateway)
 3. **CRM Integration**: Connect to customer management systems
 
-## 🌐 Deployment Options
+## 🌐 AWS Deployment
 
-- **HuggingFace Spaces**: Excellent for multimedia content (recommended)
-- **GitHub Pages**: Free hosting directly from your repository
-- **Netlify**: Easy deployment with form processing capabilities
-- **Vercel**: Fast deployment with excellent performance
-- **Traditional Hosting**: Upload files to any web hosting service
+- **Amazon S3**: Static website hosting with CloudFront CDN
+- **AWS Amplify**: Full-stack deployment with CI/CD
+- **Amazon CloudFront**: Fast global content delivery
+- **AWS Route 53**: Domain name management
+- **AWS Certificate Manager**: Free SSL certificates
 
 ## 📈 SEO Optimization
 

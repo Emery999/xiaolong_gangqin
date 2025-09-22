@@ -10,43 +10,47 @@
     "logo": "🎹 SpacePet Musical Mastery",
     "menuItems": [
       { "label": "Home", "href": "#home" },
-      { "label": "About", "href": "#about" },
-      { "label": "Services", "href": "#services" },
+      { "label": "Collin", "href": "#about" },
+      { "label": "Subjects", "href": "#services" },
       { "label": "Testimonials", "href": "#testimonials" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
   "hero": {
     "location": "section#home",
-    "mainHeading": "COLLIN MEREDITH",
+    "mainHeading": "MASTER YOUR SOUND!",
     "subtitle": "Expert piano, keyboard and guitar (acoustic and electric) instruction, composition guidance, and music theory mastery",
-    "description": "Collin is a professional music educator with exceptional results teaching students of all ages. From your first keys to advanced performance, Collin will unlock your musical potential.",
+    "description": "Professional music and English language instruction with personalized teaching approaches that inspire excellence across all skill levels. Expert guidance from your first lesson to advanced mastery.",
     "primaryButton": {
-      "text": "Start Your Journey",
+      "text": "FREE Trial Lesson",
       "href": "#contact"
     },
     "secondaryButton": {
       "text": "Learn More",
       "href": "#about"
     },
-    "backgroundImage": "assets/images/golden piano 2.jpg"
+    "backgroundImage": "assets/images/piano boy.jpg"
   },
   "about": {
     "location": "section#about",
     "sectionTitle": "About Your Instructor",
     "mainHeading": "Passionate. Professional. Proven Results.",
-    "description": "With years of experience in music education, I specialize in creating personalized learning experiences that inspire and challenge students at every level. My approach combines traditional techniques with modern teaching methods to ensure rapid progress and lasting musical understanding.",
+    "description": "Professional music and English language instruction with personalized teaching approaches that inspire excellence across all skill levels. Expert guidance combining traditional techniques with modern methods to ensure comprehensive development for each student.",
     "qualifications": [
-      "✓ Expert in piano performance and pedagogy",
-      "✓ Composition and songwriting instruction", 
-      "✓ Comprehensive music theory education",
-      "✓ Proven success with students ages 4-84",
-      "✓ Flexible scheduling and lesson formats"
+      "★ Piano and keyboard education, all levels",
+      "★ Guitar, electric and acoustic, all levels",
+      "★ Music composition in every major genre - pop, rock, jazz, classical",
+      "★ Music theory",
+      "★ English language skills - writing, reading, listening, speaking",
+      "★ SAT English test coaching - elite strategy",
+      "★ AP English grade maximization and test coaching - elite strategy",
+      "★ EFL/ESL",
+      "★ English language literature & reading comprehension"
     ]
   },
   "services": {
     "location": "section#services",
-    "sectionTitle": "Our Services",
+    "sectionTitle": "COURSES",
     "cards": [
       {
         "icon": "🎹",
@@ -71,17 +75,6 @@
         ]
       },
       {
-        "icon": "📚", 
-        "title": "Music Theory",
-        "description": "Build a solid theoretical foundation that enhances your playing and musical understanding.",
-        "features": [
-          "Scales, chords, and progressions",
-          "Analysis and ear training",
-          "Harmony and counterpoint",
-          "Exam preparation support"
-        ]
-      },
-      {
         "icon": "🎸",
         "title": "Guitar Instruction",
         "description": "Master both acoustic and electric guitar with comprehensive instruction from beginner to advanced levels.",
@@ -91,6 +84,17 @@
           "Lead guitar and soloing techniques",
           "Multiple genres and styles"
         ]
+      },
+      {
+        "icon": "📚", 
+        "title": "Music Theory",
+        "description": "Build a solid theoretical foundation that enhances your playing and musical understanding.",
+        "features": [
+          "Scales, chords, and progressions",
+          "Analysis and ear training",
+          "Harmony and counterpoint",
+          "Exam preparation support"
+        ]
       }
     ]
   },
@@ -99,16 +103,16 @@
     "sectionTitle": "What Students Say",
     "reviews": [
       {
-        "text": "My 7-year-old went from complete beginner to playing beautiful pieces in just 6 months. The patience and expertise shown is remarkable.",
-        "author": "Sarah M., Parent"
+        "text": "Collin is a patient instructor who has guided my daughter through her musical journey. His constructive feedback and gentle instruction have encouraged her to develop her piano skills. He takes the time to understand her learning style to keep her engaged and his ability to break down complex concepts into manageable steps has made a significant difference in her progress. I highly recommend Collin to anyone looking for a dedicated and inspiring piano instructor!",
+        "author": "Maureen K."
       },
       {
-        "text": "As an adult learner, I was nervous about starting piano. The supportive approach and tailored lessons gave me confidence to pursue my musical dreams.",
-        "author": "David K., Adult Student"
+        "text": "When my son began his piano lessons with Collin in October 2024, we had no idea just how transformative the experience would be. Within just a few weeks, Collin's gentle guidance, remarkable patience, and keen ability to recognize and nurture talent had already sparked a genuine interest in my son. It was clear that Collin wasn't just teaching notes and keys—he was instilling a love for music. Collin is a man of few words, but his presence speaks volumes. His quiet confidence, deep musical talent, and unwavering dedication to his students create an environment where children feel both supported and inspired. My son quickly grew fond of his classes and looked forward to every session with enthusiasm and joy. We couldn't have asked for a better teacher to introduce my son to the world of piano. Collin has laid a beautiful foundation for his musical journey, and for that, we are deeply grateful.",
+        "author": "Snigdha"
       },
       {
-        "text": "The composition lessons opened up a whole new world for me. I'm now writing my own songs and performing them!",
-        "author": "Emma T., Teen Student"
+        "text": "My two daughters's experience being tutored by Collin has been life-changing. He gently led them to appreciate, understand and love music, to the extent that my younger daughter is now a serious competitive player, all from her own passion for the piano. They looked forward to every session. They also grew tremendously on the academic side from Collin's expert insights on reading comprehension and interest in English literature. My older daughter now excels in the English language and enjoys high level English literature. The most impressive thing to me as a parent was Collin's incredibly empathic, deeply sensitive and caring approach to each of them as an individual. I've never seen a more gifted teacher in any subject ever. Collin's style is amazing and unique. He's the \"Mr. Rogers\" of both music and English teaching!",
+        "author": "D. Li"
       }
     ]
   },
@@ -121,17 +125,17 @@
       "details": {
         "email": {
           "label": "Email:",
-          "value": "info@elitepianostudio.com",
+          "value": "melody2musik@gmail.com",
           "icon": "📧"
         },
         "phone": {
           "label": "Phone:", 
-          "value": "(123) 456-7890",
+          "value": "(425) 516-9279",
           "icon": "📞"
         },
         "location": {
           "label": "Location:",
-          "value": "In-person and online lessons available", 
+          "value": "Redmond, WA - In-person and online lessons available", 
           "icon": "🏠"
         },
         "hours": {
@@ -143,9 +147,11 @@
       "lessonOptions": {
         "heading": "Lesson Options:",
         "options": [
-          "Individual lessons (30, 45, 60 minutes)",
-          "Group lessons available", 
-          "Online video lessons",
+          "FREE 20-minute trial lesson for new students",
+          "30-minute lessons: $30",
+          "60-minute lessons: $60",
+          "In-studio, in-person, and online via Zoom",
+          "Group lessons available",
           "Recital and performance opportunities"
         ]
       }
